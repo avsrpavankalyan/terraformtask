@@ -2,7 +2,7 @@ resource "aws_instance" "terraform_vm2" {
     ami = var.ami_id
     instance_type = "t2.micro"
     key_name = "terraform"
-    security_groups = ["aws_security_group.ec2_security_group"]
+    security_groups = [ "ec2_securitygroup" ]
     provisioner "local-exec" {
         command = "echo $kalyan"
       
